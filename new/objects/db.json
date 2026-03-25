@@ -1,0 +1,20 @@
+{
+  "articles": [
+    {
+      "id": "1",
+      "title": "Example Article",
+      "content": "This is an example."
+    },
+    {
+      "id": "2",
+      "title": "Second Article",
+      "content": "This is also an example."
+    },
+    {
+      "id": "3",
+      "title": "The thir example",
+      "content": "The content here"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
