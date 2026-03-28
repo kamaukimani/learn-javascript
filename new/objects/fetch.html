@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href='' />
-    <script src="fetch.js"></script>
+    <script src="fetch.js" defer></script>
     <title>KidsMDb</title>
     </head>
     <body>
@@ -26,7 +26,7 @@
         </ul>
 
         <section>
-            <form>
+            <form id="form">
                 <label for="searchByID">Search By ID</label>
                 <input id="searchByID" type="text" placeholder="Enter ID here"/>
                 <input type="submit" />
@@ -36,5 +36,10 @@
             <h4>Title</h4>
             <p>Summary</p>
         </section>
+        <form id="form1">
+            <label> Dog Name: <input type="text" name="dogName" id="dogName" /></label><br />
+            <label> Dog Breed: <input type="text" name="dogBreed" id="dogBreed" /></label><br />
+            <input type="submit" id="submit" value="Submit" />
+        </form>
     </body>
 </html>
