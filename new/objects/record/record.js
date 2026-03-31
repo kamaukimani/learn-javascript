@@ -149,3 +149,78 @@ function calculatePayroll(employees) {
     return total + allWagesFor(emp);
   }, 0);
 }
+
+
+
+
+
+
+///
+
+
+
+function createEmployeeRecord(arr) {
+  return {
+    firstName: arr[0],
+    familyName: arr[1],
+    title: arr[2],
+    payPerHour: arr[3],
+    timeInEvents: [],
+    timeOutEvents: []
+  }
+}
+
+function createEmployeeRecords(arrays) {
+  return arrays.map(createEmployeeRecord)
+}
+
+function createTimeInEvent(dateTime) {
+  const [date, hour] = dateTime.split(" ")
+
+  this.timeInEvents.push({
+    type: "TimeIn",
+    date: date,
+    hour: parseInt(hour)
+  })
+
+  return this
+}
+
+function createTimeOutEvent(dateTime) {
+  const [date, hour] = dateTime.split(" ")
+
+  this.timeOutEvents.push({
+    type: "TimeOut",
+    date: date,
+    hour: parseInt(hour)
+  })
+
+  return this
+}
+
+function hoursWorkedOnDate(date) {
+  const timeIn = this.timeInEvents.find(e => e.date === date)
+  const timeOut = this.timeOutEvents.find(e => e.date === date)
+
+  return (timeOut.hour - timeIn.hour) / 100
+}
+
+function wagesEarnedOnDate(date) {
+  return hoursWorkedOnDate.call(this, date) * this.payPerHour
+}
+
+function allWagesFor() {
+  return this.timeInEvents.reduce((total, e) => {
+    return total + wagesEarnedOnDate.call(this, e.date)
+  }, 0)
+}
+
+function findEmployeeByFirstName(collection, firstName) {
+  return collection.find(emp => emp.firstName === firstName)
+}
+
+function calculatePayroll(employeeRecords) {
+  return employeeRecords.reduce((total, emp) => {
+    return total + allWagesFor.call(emp)
+  }, 0)
+}
