@@ -1,0 +1,9 @@
+  #counter {
+      background-color: black;
+      color: white;
+      display: table;
+      padding: 10px;
+    }
+    .comments div{
+        margin-bottom: 10px;
+    }
