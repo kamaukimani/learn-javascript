@@ -109,3 +109,22 @@ function findPair(laundry){
     }
 }
 const socksArray=["sock 5", "sock 2", "sock 1", "sock 3", "sock 1"];
+
+
+//practice algorthmic problem solving;
+function hasTargetSum(arr,target){
+    //let sum=0;
+    for(let i=0;i<arr.length;i++){
+        for(let j=i+1;j<arr.length;j++){
+            //sum=arr[i]+arr[j];
+            //console.log(`The sum of ${arr[i]} and ${arr[j]} is ${sum}`);
+            //if(sum===target) return true;
+            console.log(`The sum of ${arr[i]} and ${arr[j]} is ${arr[i]+arr[j]}`)
+            if(arr[i]+arr[j]===target) return true;
+        }
+    }
+    return "No sum equal to target";
+}
+const arr1=[3, 8, 12, 4, 11, 7] //target 10
+const arr2=[22, 19, 4, 6, 30] //target 25
+const arr3=[1, 2, 5] //target 4
