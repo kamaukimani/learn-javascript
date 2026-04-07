@@ -92,3 +92,20 @@ const obj={
 function findLaundry(laundry){
     if(laundry.socks)return "Socks have been found"
 };
+//Quadratic time
+//Given an input array of n elements, the worst case scenario is that the algorithm needs to
+//make n² iterations.
+//....
+//o(n²)
+//....
+
+function findPair(laundry){
+    for(let i=0;i<laundry.length;i++){
+        for(let j=i+1;j<laundry.length;j++){
+            if(laundry[i]===laundry[j]){
+                return [laundry[i],laundry[j]];
+            }            
+        }
+    }
+}
+const socksArray=["sock 5", "sock 2", "sock 1", "sock 3", "sock 1"];
