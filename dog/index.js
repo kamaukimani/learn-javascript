@@ -44,7 +44,8 @@ function findStock(sortedArray){
         }
     }
 }
-
+//Binary search algorithm
+//helps to quickly find elements in a sorted array
 
 function binarySearch(arr,target){
     let start=0;
@@ -58,5 +59,18 @@ function binarySearch(arr,target){
             end=mid-1;
         }
     }
+    return "THE SEARCH ARGUMENT ENTERED DOES NOT EXIST IN THE CURRENT SEARCH LIST";
 };
-const nameArray=['Alex','Brian','Cate','David','Ephantus','Felix','Gabriel','Hana']
+const nameArray=['Alex','Brian','Cate','David','Ephantus','Felix','Gabriel','Hana'];
+
+//CONSTANT TIME ==>OBJECT
+const obj={
+    shirts:true,
+    shorts:true,
+    socks:true,
+    pants:true
+}
+function findLaundry(laundry){
+    if(laundry.socks)return "Socks have been found"
+};
+
