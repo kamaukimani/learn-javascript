@@ -88,3 +88,47 @@ transaction._amount=2000
 transaction._amount
 transaction._date
 transaction._memo
+
+//create private fields that one can't change directly
+
+class Transaction1{
+    #amount;
+    #date;
+    #memo
+    constructor(amount,date,memo){
+        this.#amount=amount;
+        this.#date=date;
+        this.#memo=memo;
+    }
+}
+const transaction1=new Transaction1(5000,"1/01/2000","girlfriend-shopping");
+//console.log(transaction1.#amount)
+
+class Breakfast{
+    constructor(food,drink){
+        this.food=food;
+        this.drink=drink;
+    }
+}
+const bfast=new Breakfast("egg","juice")
+
+class Lunch{
+    constructor(salad,soup,drink){
+        this.salad=salad;
+        this.soup=soup;
+        this.drink=drink;
+    }
+}
+const newLunch=new Lunch("side salad","broccoli cheddar soup","iced tea")
+
+class Dinner{
+    #dessert
+    constructor(salad,soup,entree,dessert){
+        this.#dessert=dessert;
+        this.salad=salad;
+        this.soup=soup;
+        this.entree=entree;
+    }
+}
+
+const newDinner=new Dinner("balsamic salad","consomme","filet mignon","cheesecake")
