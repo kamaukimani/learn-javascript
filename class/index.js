@@ -200,3 +200,24 @@ const square=new Square(5);
 const side=square.sideLength;
 const area=square.area;
 //const area=square.area();      => this results to an error
+
+
+//set method
+class Square1{
+    constructor(sideLength){
+        this.sideLength=sideLength;
+    }
+    get area(){
+        return this.sideLength*this.sideLength;
+    }
+    set area(newArea){
+        if(newArea>0){
+            this.sideLength=Math.sqrt(newArea);
+        }else{
+            console.warn("Area can not be less than or equal to zero")
+        }
+    }
+}
+const square1=new Square1(5);
+const side1=square1.sideLength;
+const area1=square1.area;
