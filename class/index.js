@@ -221,3 +221,30 @@ class Square1{
 const square1=new Square1(5);
 const side1=square1.sideLength;
 const area1=square1.area;
+
+//using get and set with private fields
+
+class Square2{
+    #sideLength
+    constructor(sideLength){
+        if(sideLength>0){
+            this.#sideLength=sideLength
+        }else{
+            throw new Error("A square side length must be positive");
+        }
+        
+    }
+    get sideLength(){
+        return this.#sideLength
+        
+    }
+    set sideLength(sideLength){
+        if(sideLength>0){
+            this.#sideLength=sideLength;
+        }else{
+            throw new Error("A square side length must be positive")
+        }
+    }
+}
+const square2=new Square2(7);
+const side2=square2.sideLength;
