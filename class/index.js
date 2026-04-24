@@ -273,3 +273,21 @@ class Circle{
         this.radius=Math.sqrt(area/Math.PI)
     }
 }
+/*
+==>First, let's create a class of Circle
+Circle will accept 1 parameter, radius , and use this.radius to store the value
+Use Math.PI to get an accurate measurement of pi
+(https://en.wikipedia.org/wiki/Pi) (π)
+==>Define getter methods for diameter , circumference , and area which will calculate each
+value using this.radius and pi
+==>Define setter methods for diameter , circumference , and area which will accept values for
+each calculation, calculate the radius based on the input value and set this.radius
+accordingly
+Hint: You will need to use Math.sqrt()
+(https://developer.mozilla.org/en-
+US/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt) in your area setter method
+For reference, here are the formulas for calculating diameter, circumference and area:
+Diameter = radius • 2
+Circumference = π • diameter
+Area = π • radius2
+*/
