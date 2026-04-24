@@ -110,7 +110,7 @@ class Breakfast{
         this.drink=drink;
     }
 }
-const bfast=new Breakfast("egg","juice")
+const bfast=new Breakfast("egg","juice");
 
 class Lunch{
     constructor(salad,soup,drink){
@@ -119,7 +119,7 @@ class Lunch{
         this.drink=drink;
     }
 }
-const newLunch=new Lunch("side salad","broccoli cheddar soup","iced tea")
+const newLunch=new Lunch("side salad","broccoli cheddar soup","iced tea");
 
 class Dinner{
     #dessert
@@ -131,4 +131,72 @@ class Dinner{
     }
 }
 
-const newDinner=new Dinner("balsamic salad","consomme","filet mignon","cheesecake")
+const newDinner=new Dinner("balsamic salad","consomme","filet mignon","cheesecake");
+
+class Cat{
+    constructor(name,sex){
+        this.name=name;
+        this.sex=sex;
+    }
+    speak(){
+        return`${this.name} says meow!`
+    }
+}
+
+const cat = new Cat("Sasha", "female");
+
+class Dog{
+    constructor(name,sex){
+        this.name=name;
+        this.sex=sex;
+    }
+    speak(){
+        return`${this.name} says woof!`
+    }
+}
+
+const dog = new Dog("Rufio", "male");
+class Bird{
+    constructor(name,sex){
+        this.name=name;
+        this.sex=sex;
+    }
+    speak(){
+        const inst=this.sex==="male" ? `It's me! ${this.name} , the parrot!` : `${this.name} says squawk!`
+        return inst;
+    }
+}
+const bird = new Bird("Pablo", "male");
+const bird2 = new Bird("Mable", "female");
+
+//static methods
+
+class CommonMath{
+    static tripple(number){
+        return number*number*number;
+    }
+    static findHypotenuse(a,b){
+        return Math.sqrt(a*a+b*b)
+    }
+}
+
+const num=CommonMath.tripple(3);
+const c=CommonMath.findHypotenuse(3,4);
+
+//get method
+
+class Square{
+    constructor(sideLength){
+        this.sideLength=sideLength;
+    }
+    get area(){
+        return this.sideLength*this.sideLength;
+    }
+    areaMessage(){
+        return `The area of square with side ${this.sideLength} is ${this.area}`;
+    }
+}
+const square=new Square(5);
+const side=square.sideLength;
+const area=square.area;
+//const area=square.area();      => this results to an error
