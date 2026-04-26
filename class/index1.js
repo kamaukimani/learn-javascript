@@ -69,7 +69,7 @@ class Square extends Polygon{
     get area(){
         const [a,b,c,d]=this.arr
         if(a===b&&a===c&&a===d&&b===c&&b===d&&c==d){
-            return a*b*c*d;
+            return a*b || b*c ||c*d ||a*c||a*d|| b*d;
         }else{
             return "Invalid inputs!"
         }
