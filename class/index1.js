@@ -20,3 +20,60 @@ class Bird extends Pet{
 const dog = new Dog("Shadow", "woof");
 const cat = new Cat("Missy", "meow");
 const bird = new Bird("Tiki", "squawk");
+
+//code challenge
+class Polygon{
+    constructor(arr){
+        this.arr=arr;
+        this.count=0;
+        this.sum=0;
+    }
+    get countSides(){
+        for(const item of this.arr){
+            this.count+=1
+           
+        }
+        return this.count;
+    }
+    get perimeter(){
+        for(const side of this.arr){
+            this.sum+=side;
+        }
+        return this.sum;
+    }
+
+}
+const test=new Polygon([1,7,5])
+class Triangle extends Polygon{
+    get isValid(){
+        const[a,b,c]=this.arr;
+        if(a+b>c && a+c>b && b+c>a ){
+            return "The sides are valid"
+        }else{
+            return "The sides can not make a triangle";
+        }
+        }
+}
+// const triangle= new Triangle([3,4,5]);
+const triangle= new Triangle([3,2,5]);
+
+class Square extends Polygon{
+    get isValid(){
+        const [a,b,c,d]=this.arr
+        if(a===b&&a===c&&a===d&&b===c&&b===d&&c==d){
+            return "The sides are valid";
+        }else{
+            return "The sides can not form a square";
+        }
+    }
+    get area(){
+        const [a,b,c,d]=this.arr
+        if(a===b&&a===c&&a===d&&b===c&&b===d&&c==d){
+            return a*b*c*d;
+        }else{
+            return "Invalid inputs!"
+        }
+        
+    }
+}
+const square=new Square([3,3,3,3])
