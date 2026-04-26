@@ -77,3 +77,44 @@ class Square extends Polygon{
     }
 }
 const square=new Square([3,3,3,3])
+
+/*
+class Polygon {
+    constructor(arr) {
+        this.arr = arr;
+    }
+
+    get countSides() {
+        return this.arr.length;
+    }
+
+    get perimeter() {
+        return this.arr.reduce((sum, side) => sum + side, 0);
+    }
+}
+
+class Triangle extends Polygon {
+    get isValid() {
+        if (this.arr.length !== 3) return false;
+
+        const [a, b, c] = this.arr;
+        return (a + b > c && a + c > b && b + c > a);
+    }
+}
+
+class Square extends Polygon {
+    get isValid() {
+        if (this.arr.length !== 4) return false;
+
+        const [a, ...rest] = this.arr;
+        return rest.every(side => side === a);
+    }
+
+    get area() {
+        if (!this.isValid) return null;
+
+        const side = this.arr[0];
+        return side * side;
+    }
+}
+ */
