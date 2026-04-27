@@ -145,3 +145,37 @@ Use the get keyword to make a getter method isValid that checks if the given 4 s
 square is valid. A square is valid when the lengths of all sides are equal.
 Use the get keyword to make a getter method area that calculates the area of the square.
 */
+
+
+
+//super keyword
+
+class Pet1{
+    constructor(name){
+        this.name=name;
+        this.owner=null;
+    }
+    static definition(){
+        return`A pet is an animal kept primarily for a person's company.`;
+    }
+}
+class Dog1 extends Pet1{
+    constructor(name,breed){
+        //super used as a method ==> super()
+        super(name);
+        this.breed=breed;
+    }
+    static definition(){
+        return (
+            //super used as an object ==>super.
+            super.definition() + "Dogs are one of the most common types of pets."
+        )
+    }
+}
+const creature =new Pet1("The thing");
+const dog1=new Dog1("Spot","foxhound");
+
+//calling the static methods 
+Pet1.definition();
+Dog1.definition();
+
