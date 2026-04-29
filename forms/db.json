@@ -1,0 +1,40 @@
+{
+  "dogs": [
+    {
+      "id": "1",
+      "owner": "John",
+      "address": "New York",
+      "dogName": "Lex",
+      "dogAge": 3
+    },
+    {
+      "owner": "Doe",
+      "address": "Nairobi",
+      "dogName": "mutina",
+      "dogAge": "2",
+      "id": "F3zKMfFk3hw"
+    },
+    {
+      "owner": "Kinuthia",
+      "address": "Nakuru",
+      "dogName": "Byron",
+      "dogAge": "3",
+      "id": "Z7qk7mai8Wo"
+    },
+    {
+      "owner": "Papi",
+      "address": "Nyeri",
+      "dogName": "kawhite",
+      "dogAge": "4",
+      "id": "2SVeK-QzHsQ"
+    },
+    {
+      "owner": "Juli",
+      "address": "Nanyuki",
+      "dogName": "Kasandra",
+      "dogAge": "1",
+      "id": "Wcnn29z_5KU"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

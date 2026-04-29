@@ -11,5 +11,104 @@
         <h1>Learn on collecting user info using forms</h1>
         <p>Also learn how to utilize  form actions</p>
     </div>
+    <div>
+        <form id="form">
+        <!-- action="http://localhost:3000/dogs" method="POST" -->
+        
+            <input type="text" placeholder="Enter owners name" name="owner" id="owner"><br>
+            <input type="text" placeholder="Enter owners address" name="address" id="address"><br>
+            <input type="text" placeholder="Enter dogs name" name="dogName" id="dogName"><br>
+            <input type="text" placeholder="Enter dogs age" name="dogAge" id="dogAge"><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <br>
+    <div>
+        <form id="form-get" autocomplete="on">
+        <!-- action="http://localhost:3000/dogs" method="POST" -->
+        
+            <input type="text" placeholder="Enter owners name" name="owner" id="owner-get"><br>
+            <input type="text" placeholder="Enter owners address" name="address" id="address-get"><br>
+            <input type="text" placeholder="Enter dogs name" name="dogName" id="dogName-get"><br>
+            <input type="text" placeholder="Enter dogs age" name="dogAge" id="dogAge-get"><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <br>
+    <div>
+        <form autocomplete="on">
+            <label for="password">Enter Password</label><br>
+            <input type="password" name="password" id="password" placeholder="Enter your password"><br>
+            <label for="tel">Phone Number</label><br>
+            <input id="tel" type="tel" name="telphone" placeholder="Enter mobile Number" required><br>
+            <h3>Which programming language do you like?</h3>
+            <input type="radio" name="language">Javascript<br>
+            <input type="radio"name=language>Python<br>
+            <input type="radio"name=language>Java<br>
+            <!--  check box is same as radio only that you can choose more than one option-->
+              <h4>What ia the size of your shirt?</h4><br>
+              <select name="size">
+                <option value="small" selected>Small</option>
+                <option value="medium">Mediun</option>
+                <option value="large">Large</option>
+                <option value="x-large">Extra Large</option>
+              </select><br><br>
+              <h5>What Else?</h5>
+              <textarea name="message"></textarea><br>
+            <input type="submit" value="Submit">
+        </form>
+        <h5>Anything else you would want us to know?</h5>
+        <textarea name="message"></textarea>
+    </div>
+    <div>
+        <form>
+            <label for="name">Name</label><br>
+            <input type="text" id="name" name="name" placeholder="Enter Name" required><br>
+            <label for="email">Email</label><br>
+            <input id="email" name="email" type="email" placeholder="Enter Email" required><br>
+            <label for="telephone">Telephone</label><br>
+            <input id="telephone" type="tel" name="telephone" placeholder="Enter Telephone"><br>
+            <textarea name="message" placeholder="Enter Mesasage"></textarea><br>
+            <input type="checkbox" name="check" value="one">One<br>
+            <input type="checkbox" name="check" value="two">Two<br>
+            <input type="checkbox" nme="check" value="three">Three<br>
+            <input type="submit" value="Click to Submit">
+        </form>
+    </div>
+    <div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.594817870565!2d36.574441173643166!3d-0.606462935258203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x18291d3282847ddb%3A0x1995edd23aead653!2sEngineer!5e0!3m2!1sen!2ske!4v1777481651733!5m2!1sen!2ske" 
+        width="100%" 
+        height="400" 
+        style="border:0;"
+        frameborder="1"
+        allowfullscreen
+        ></iframe>
+        <iframe
+        src="https://www.youtube.com/embed/wwKNuyijBoE?autoplay=1&mute=0"
+        width="600"
+        height="450"
+        style="border:0"
+        frameborder="0"
+        allowfullscreen 
+        alow="autoplay"
+        ></iframe>
+    </div>
+    <div>
+        <audio controls >
+            <!-- autoplay loop  included next to controls-->
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg"> 
+            <!-- <source src="audio.mp3" type="audio/mpeg"> -->
+            <p>
+                Sorry your browser doesn't support HTML5 Audio! Please
+                <a href="http://browsehappy.com/?locale=en">upgrade your browser</a>.
+            </p>
+        </audio>
+    </div>
+    <div>
+        <video controls autoplay muted width="600" height="400">
+            <source src="video.mp4" type="video/mp4">
+            <!-- include a fall back-->
+        </video>
+    </div>
 </body>
 </html>
